@@ -1,0 +1,77 @@
+<div class="container mx-auto">
+    <div class="flex flex-col flex-auto min-w-0">
+        <div class="flex-auto p-2 sm:p-10">
+        
+            <div class="title text-center mb-4">
+                <span class="heading text-3xl font-bold">SENSOR CALIBRATION</span>
+                <br>
+                <span class="subheading text-lg text-gray-600">Sensor Configuration Values</span>
+            </div>
+            <hr class="border-gray-300 my-3">
+
+            
+            <!-- Form -->
+            <form [formGroup]="sensorForm" class="max-w-2xl">
+                <div class="grid grid-cols-1 gap-5">
+
+                
+                    <div class="flex items-center">
+                        <label for="mCO2" class="block text-gray-700 text-base font-semibold w-1/3">CO2:</label>
+                        <input
+                            type="number"
+                            id="mCO2"
+                            class="bg-gray-200 border-0 rounded-lg px-3 py-2 w-1/2 focus:ring-teal-600 focus:border-teal-600"
+                            formControlName="mCO2"
+                        />
+                    </div>
+                    <div class="flex items-center">
+                        <label for="mPM1" class="block text-gray-700 text-base font-semibold w-1/3">pm1 :</label>
+                        <input
+                            type="number"
+                            id="mPM1"
+                            class="bg-gray-200 border-0 rounded-lg px-3 py-2 w-1/2 focus:ring-teal-600 focus:border-teal-600"
+                            formControlName="mPM1"
+                        />
+                    </div>
+                    <div class="flex items-center">
+                        <label for="mPM25" class="block text-gray-700 text-base font-semibold w-1/3">pm2.5 :</label>
+                        <input
+                            type="number"
+                            id="mPM25"
+                            class="bg-gray-200 border-0 rounded-lg px-3 py-2 w-1/2 focus:ring-teal-600 focus:border-teal-600"
+                            formControlName="mPM25"
+                        />
+                    </div>
+                    <div class="flex items-center">
+                        <label for="mPM10" class="block text-gray-700 text-base font-semibold w-1/3">pm10 :</label>
+                        <input
+                            type="number"
+                            id="mPM10"
+                            class="bg-gray-200 border-0 rounded-lg px-3 py-2 w-1/2 focus:ring-teal-600 focus:border-teal-600"
+                            formControlName="mPM10"
+                        />
+                    </div>
+
+                    
+
+                     
+
+                    
+
+                    <div class="flex items-center justify-center">
+                        <div class="w-1/5"></div> 
+                        <input
+                            type="submit"
+                            class="submitbtn bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-10 rounded-xl focus:outline-none focus:shadow-outline"
+                            value="Submit" 
+                            (click)="saveSensor()"
+                           
+                        />
+                    </div>
+                </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+                     
